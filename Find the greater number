@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    int q,w,e;
+    printf(" enter number q, w, and,e ");
+    scanf("%d%d%d",&q,&w,&e);
+    (q>w && q>e)? printf("q is the greater number "):(w>e)?printf("w is the greater number "):printf("e is tha greater number ");
+    return 0;
+}

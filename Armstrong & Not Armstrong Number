@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+    int num,count=0,p=0,temp,t,n,z;
+    printf("Enter any Number ");
+    scanf("%d",&num);
+    temp = num;
+    while(temp>0)
+    {
+        count++;
+        temp=temp/10;
+    }
+    n=num;
+    while(n>0)
+    {
+        t = n%10;
+        p = p + pow(t,count);
+        n=n/10;
+    }
+    if(p == num)
+    {
+        printf("Armstrong");
+    }
+    else
+    {
+        printf("Not Armstorng");
+    }
+}
+    
+ 

@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+   int a[7] = {6,2,7,5,9,10,5};
+    int i=0, j=6, flag=0;
+    while(1)
+    {
+        if(i<7 && flag == 0)
+        {
+            printf("%d,",a[i]);
+            i++;
+        }
+        if (i == 7)
+        {
+            flag = 1;
+            printf("\n");
+            i--;
+        }
+        if(i >= 0 && flag == 1)
+        {
+            printf("%d,",a[i]);
+            i--;
+        }
+        if(i == -1 && flag == 1)
+        break ;
+    }
+}

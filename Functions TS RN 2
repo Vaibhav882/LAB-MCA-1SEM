@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+void add(int,int);
+int main ()
+
+{
+    int x,y;
+    printf("Enter two number");
+    scanf("%d %d ",&x,&y);
+    add(x,y);
+    printf("\n");
+    return 0;
+}
+    void add(int a,int b)
+    {
+        int c;
+        c=a+b;
+        printf("sum %d",c);
+    }
+   

@@ -1,0 +1,17 @@
+#include<stdio.h>
+int factnumber(int n);
+int main()
+{
+    int num;
+    printf("enter a number :");
+    scanf("%d",&num);
+    printf("fact = %d", factnumber(num));
+    return 0;
+}
+ int factnumber(int n)
+ {
+     if(n == 1)
+      return 1;
+     return n * factnumber(n-1);
+}
+ 

@@ -1,0 +1,79 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a[50],op,size,result,in;
+void input_array(int [],int);
+int max_array(int [],int);
+int min_array(int [],int);
+int sum_array(int [],int);
+clrscr();
+printf("Enter the size of array");
+scanf("%d",&size);
+input_array(a,size);
+printf("option:\n1:minium\n2:maximium\n3:sum\n enter choice:");
+scanf("%d",&op);
+switch(op)
+{
+case 1:
+result=min_array(a,size);
+printf("minium in array %d at index %d",result);
+break;
+case 2:
+result=max_array(a,size);
+printf("maximum in array %d at index %d ",result);
+break;
+case 3:
+result=sum_array(a,size);
+printf("Sum of array is %d",result);
+break;
+default:
+printf("worng choice");
+break;
+}
+getch();
+}
+void input_array(int a[],int size)
+{
+int i;
+for(i=0;i<size;i++)
+{
+printf("Enter the value %d :",i+1);
+scanf("%d",&a[i]);
+}
+}
+int min_array(int a[],int size)
+{
+int i,min;
+min=a[0];
+for(i=1;i<size;i++)
+{
+if(min>a[i])
+{
+min=a[i];
+}
+}
+return min;
+}
+int max_array(int a[],int size)
+{
+int i,max;
+max=a[0];
+for(i=1;i<size;i++)
+{
+if(max<a[i])
+{
+max=a[i];
+}
+}
+return max;
+}
+int sum_array(int a[],int size)
+{
+int i,sum=0;
+for(i=0;i<size;i++)
+{
+sum+=a[i];
+}
+return sum;
+}
